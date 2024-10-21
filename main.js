@@ -25,10 +25,11 @@ scene.add(light);
 camera.position.z = 5;
 
 const loader = new GLTFLoader();
+const model_name = "";
 
 // Load a GLTF model
 loader.load(
-    'path/to/your/model.gltf',
+    'models/GLTF/'+model_name+'.gltf',
     (gltf) => {
         scene.add(gltf.scene);
         gltf.scene.position.set(0, 0, 0); // Set the position of the loaded model

@@ -1,0 +1,132 @@
+; 『Goma-An』用データファイル				★ 群馬県沼田市
+;
+; ▼デフォルト地図システム／レイアウト
+	basepage	select4
+; ▼地図以外のページ内容（本文）
+; 左から２列目の「page」は、地図以外のページ内容を設定する行に用いる識別符号です。
+; 左から３列目は次の通り。「top」は地図の上に表示する内容，「bottom」は地図の下に表示する内容，「title」はページのタイトル（ウィンドウのタイトルバーに表示）を設定します。
+; 左から４列目～６列目は空欄のままにしておいてください。７列目以降にマーカー等を設置するときと同様に表示内容を記入してください。
+; ただし，「titile」の場合は，９列目（表示タイトル）のみ有効です。
+; メモ・整理番号	識別符号	位置	【未使用】	【未使用】	【未使用】	表示HTML	リンク先URL	リンクターゲット	表示タイトル	表示本文 （改行は \n を記入）	表示画像ファイル名	画像幅	画像高
+表題	page	title							群馬県沼田市の河岸段丘
+上部	page	top				<h2 style="font-size:90%;">地理オンライン教材</h2>
+上部	page	top							群馬県沼田市の河岸段丘
+本文(下)	page	bottom	leaflet			<p style="margin-top:1em; margin-bottom:1em; font-size:80%; line-height:125%;">地図の右上に表示されているアイコンにマウス・カーソルを置くと現れるパネルの操作で，地図の種類を切り替えられます。<br />[ 段彩陰影図 ] → 色と陰影で地形を分かりやすく表した図<br />[ 傾斜量図 ] → 白いほど傾斜が緩やか，黒いほど傾斜が急であることを表した図<br />[ 地理院地図 ] → 国土地理院の地形図と同様の地図><br />[ 土砂災害警戒区域(急傾斜地) ] → 急傾斜地の崩壊の発生により住民に危害が生じる恐れのある区域を示した図（<span style="color:#fb684c">■</span>朱色が特別警戒区域，<span style="color:#ffed4c">■</span>黄色が警戒区域を表す）<br />[ 地理院写真 ] → 国土地理院撮影の空中写真</p>
+下部	page	bottom								掲載している写真は，2013年９月に撮影したものです。
+下部	page	bottom				<hr />
+下部	page	bottom					/~tsato/webmap/			ウェブ地図の目次へ
+右側	page	right				<p style="color:windowtext; font-size:100%; line-height:150%; text-align:justify; text-justify:inter-ideograph;">左の地図中に表示されたマーカーをクリックすると，その地点で撮影した写真を見ることができます。</p>
+右側	page	right				<p style="color:windowtext; font-size:100%; line-height:150%; text-align:justify; text-justify:inter-ideograph;">地図が表示されるまでしばらく時間がかかる場合があります。 表示がうまくできない場合は，再読込をおこなってみてください。</p>
+; ▼地図初期表示設定
+; 左から２列目の「map」は、Googleマップの初期表示状態を設定する行に用いる識別符号です。書き換えないでください。
+; 左から６列目の【未使用】欄は、現バージョンでは未使用です。将来のバージョンアップで機能拡張の際、使用する予定です。
+; メモ	識別符号	中心緯度	中心経度	ズーム	表示地図タイプ
+	view	36.650000	139.070000	15	GSI
+; ▼表示可能な地図タイプ
+; 左から２列目の「maptype」は、Googleマップの初期表示状態を設定する行に用いる識別符号です。書き換えないでください。
+; 左から３列目と４列目を使って、１行に地図タイプを２種類まで記入できます。複数の行にわたって記述できます。
+; メモ・整理番号	識別符号	地図１	地図２
+	maptype	Relief	GSIslope
+;	maptype	GSIpale
+	maptype	GSI
+	maptype	HazardSlope
+	maptype	GSIphoto
+	maptype	Roadmap
+; ▼レイヤの使用
+;	layer	現地写真	yes
+; ▼地点データ
+; 左から２列目に「marker」と記述すると、地図上にマーカーを設置することができます。設置地点の緯度・経度およびマーカーをクリックすると表示される内容を指定してください。
+; 左から２列目に「continue」（または「cont」）と記述すると、上の行と同一地点のマーカーについて情報ウィンドウへの表示情報を継続して記述できます。
+; メモ・整理番号	識別符号	緯度	経度	【未使用】	マーカータイトル	表示HTML	リンク先URL	リンクターゲット	表示タイトル	表示本文 （改行は \n を記入）	表示画像ファイル名	画像幅	画像高
+2015	marker	36.642860	139.035550		2015		photo720/cimg2015.jpg	_lightbox		▲北東を見る	photo288/cimg2015.jpg	288	192
+2014	cont						photo720/cimg2014.jpg	_lightbox		▲東を見る	photo288/cimg2014.jpg	288	192
+2020	marker	36.642680	139.036350		2020		photo720/cimg2020.jpg	_lightbox		▲西を見る　ＪＲ沼田駅	photo288/cimg2020.jpg	288	192
+2019	cont						photo720/cimg2019.jpg	_lightbox		▲北東を見る	photo288/cimg2019.jpg	288	192
+2024	marker	36.643340	139.038040		2024		photo720/cimg2024.jpg	_lightbox		▲東北東を見る	photo288/cimg2024.jpg	288	192
+2026	cont						photo720/cimg2026.jpg	_lightbox		▲西南西を見る	photo288/cimg2026.jpg	288	192
+2032	marker	36.643660	139.039400		2032		photo720/cimg2032.jpg	_lightbox		▲東を見る	photo288/cimg2032.jpg	288	192
+2029	cont						photo720/cimg2029.jpg	_lightbox		▲南を見る	photo288/cimg2029.jpg	288	192
+2027	cont						photo720/cimg2027.jpg	_lightbox		▲西南西を見る	photo288/cimg2027.jpg	288	192
+2033	marker	36.643610	139.040100		2033		photo720/cimg2033.jpg	_lightbox		▲南東を見る\nこの坂道は「滝坂」という。	photo288/cimg2033.jpg	288	192
+2034	cont						photo720/cimg2034.jpg	_lightbox		▲西を見る\n左手の建物は旅館「見晴館」	photo288/cimg2034.jpg	288	192
+2039	marker	36.643200	139.040420		2039		photo720/cimg2039.jpg	_lightbox		▲東を見る　この日，水路に水は流れていなかった。	photo288/cimg2039.jpg	288	192
+2036	cont						photo720/cimg2036.jpg	_lightbox		▲南を見る\n正面に見えるものは…	photo288/cimg2036.jpg	288	192
+2041	cont						photo720/cimg2041.jpg	_lightbox		屋根付きの階段	photo288/cimg2041.jpg	216	288
+2042	cont						photo720/cimg2042.jpg	_lightbox			photo288/cimg2042.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜこの場所に階段があるのだろう。\nなぜ階段に屋根が付いているのだろう。（ヒント：この地域では冬に雪が降る）
+2048	marker	36.642720	139.040540		2048		photo720/cimg2048.jpg	_lightbox		▲南西を見る	photo288/cimg2048.jpg	288	192
+2050	cont						photo720/cimg2050.jpg	_lightbox		▲南南東を見る	photo288/cimg2050.jpg	288	192
+2055	marker	36.643320	139.041340		2055		photo720/cimg2055.jpg	_lightbox		▲北東を見る	photo288/cimg2055.jpg	288	192
+2059	cont						photo720/cimg2059.jpg	_lightbox		かつて河川によって運ばれてきて堆積した砂礫の地層が露出している。	photo288/cimg2059.jpg	288	192
+2067	marker	36.644270	139.040450		2067		photo720/cimg2067.jpg	_lightbox		▲北西を見る	photo288/cimg2067.jpg	288	192
+2066	cont						photo720/cimg2066.jpg	_lightbox		この坂道は「榛名坂」という。	photo288/cimg2066.jpg	288	192
+2078	marker	36.644520	139.041710		2078		photo720/cimg2078.jpg	_lightbox		▲東北東を見る	photo288/cimg2078.jpg	288	192
+2077	cont						photo720/cimg2077.jpg	_lightbox		▲西南西を見る	photo288/cimg2077.jpg	288	192
+2080	marker	36.646030	139.039800		2080		photo720/cimg2080.jpg	_lightbox		▲西南西を見る	photo288/cimg2080.jpg	288	192
+2088	marker	36.647100	139.040030		2088		photo720/cimg2088.jpg	_lightbox		沼田城跡　現在は公園になっている。	photo288/cimg2088.jpg	288	192
+	cont									沼田城は1533年に築かれた城で，現在の沼田市中心市街地は沼田城の城下町であった。		288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜ沼田城はこの場所につくられたのだろうか。地形に着目して考えてみよう。
+2092	marker	36.648860	139.037830		2092		photo720/cimg2092.jpg	_lightbox		「急傾斜地崩壊危険区域」の表示がある。	photo288/cimg2092.jpg	216	288
+2095	marker	36.649250	139.038070		2095		photo720/cimg2095.jpg	_lightbox		▲北を見る	photo288/cimg2095.jpg	288	192
+2094	cont						photo720/cimg2094.jpg	_lightbox		▲北西を見る	photo288/cimg2094.jpg	288	192
+2102	marker	36.643980	139.044030		2102		photo720/cimg2102.jpg	_lightbox		▲北東を見る	photo288/cimg2102.jpg	288	192
+2104	cont						photo720/cimg2104.jpg	_lightbox		▲西を見る	photo288/cimg2104.jpg	288	192
+2114	marker	36.635240	139.045200		2114		photo720/cimg2114.jpg	_lightbox		▲北西を見る	photo288/cimg2114.jpg	288	192
+2112	cont						photo720/cimg2112.jpg	_lightbox		▲北東を見る	photo288/cimg2112.jpg	288	192
+2115	cont						photo720/cimg2115.jpg	_lightbox		▲南東を見る\n群馬県立利根実業高校	photo288/cimg2115.jpg	288	192
+2123	marker	36.630620	139.046620		2123		photo720/cimg2123.jpg	_lightbox		▲東を見る	photo288/cimg2123.jpg	288	192
+2125	marker	36.633980	139.049960		2125		photo720/cimg2125.jpg	_lightbox		▲東を見る	photo288/cimg2125.jpg	288	192
+2128	marker	36.638520	139.053520		2128		photo720/cimg2128.jpg	_lightbox		▲東北東を見る	photo288/cimg2128.jpg	288	192
+2132	marker	36.643130	139.056330		2132		photo720/cimg2132.jpg	_lightbox		▲北西を見る　蒟蒻畑	photo288/cimg2132.jpg	288	192
+2135	marker	36.645120	139.060950		2135		photo720/cimg2135.jpg	_lightbox		▲東を見る\n\n正面左側の道を進んだ先で，右側の道路を見下ろすと…	photo288/cimg2135.jpg	288	192
+2137	cont						photo720/cimg2137.jpg	_lightbox			photo288/cimg2137.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜ道路がヘアピンカーブを描いているのだろうか。
+2144	marker	36.648050	139.078120		2144		photo720/cimg2144.jpg	_lightbox		▲高速道路を走るバスの車内から東北東を見る	photo288/cimg2144.jpg	288	192
+2154	cont						photo720/cimg2154.jpg	_lightbox		▲高速道路を走るバスの車内から西南西を見る	photo288/cimg2154.jpg	288	192
+2153	marker	36.646250	139.079100		2153		photo720/cimg2153.jpg	_lightbox		▲高速道路を走るバスの車内から西南西を見る	photo288/cimg2153.jpg	288	192
+2162	marker	36.652250	139.066100		2162		photo720/cimg2162.jpg	_lightbox		▲東を見る	photo288/cimg2162.jpg	288	192
+2160	cont						photo720/cimg2160.jpg	_lightbox		▲南を見る	photo288/cimg2160.jpg	288	192
+2165	marker	36.649630	139.070700		2165		photo720/cimg2165.jpg	_lightbox		▲東を見る	photo288/cimg2165.jpg	288	192
+2168	marker	36.647660	139.069580		2168		photo720/cimg2168.jpg	_lightbox		▲西南西を見る　蒟蒻畑がある。	photo288/cimg2168.jpg	288	192
+	cont									畑の脇には，次のように記された石碑がある。\n\n追墓坂（上沼須町）\nここの古い地名が追墓（ヲイハカ）とあたことに由来し　この読みを訛って「おっはこ坂」と呼ばれるようになった\n金井竹徳「沼田の坂」より		288	192
+2175	marker	36.650250	139.074480		2175		photo720/cimg2175.jpg	_lightbox		▲南南東を見る\n写真右　樹林の陰に見える薄緑色の屋根は，片品川の南側にある昭和村立東小学校	photo288/cimg2175.jpg	288	192
+2176	cont						photo720/cimg2176.jpg	_lightbox		▲南東を見る	photo288/cimg2176.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜ高速道路（赤色のトラス橋）はあんなに高いところを通っているのだろうか。
+2174	cont						photo720/cimg2174.jpg	_lightbox		▲北東を見る	photo288/cimg2174.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\n写真左から中央の延びる白いガードレール付きの道路を挟んで、左側の建物がある場所と右下の田との高低差に注目。
+2180	marker	36.651360	139.077120		2180		photo720/cimg2180.jpg	_lightbox		▲北を見る　りんごが栽培されている。\nよく見ると，斜面の上にも建物が見える。	photo288/cimg2180.jpg	288	192
+2182	cont						photo720/cimg2182.jpg	_lightbox		▲西北西を見る	photo288/cimg2182.jpg	288	192
+2184	marker	36.651660	139.078160		2184		photo720/cimg2184.jpg	_lightbox		▲西を見る　手前は蒟蒻畑\n写真右上，斜面の上に建物が見える。	photo288/cimg2184.jpg	288	192
+2185	marker	36.652210	139.079070		2185		photo720/cimg2185.jpg	_lightbox		▲南を見る　手前は蒟蒻畑	photo288/cimg2185.jpg	288	192
+2192	marker	36.655120	139.087380		2192		photo720/cimg2192.jpg	_lightbox		▲北東を見る	photo288/cimg2192.jpg	288	192
+2188	cont						photo720/cimg2188.jpg	_lightbox		▲南西を見る	photo288/cimg2188.jpg	288	192
+2196	marker	36.657360	139.091000		2196		photo720/cimg2196.jpg	_lightbox		▲北を見る	photo288/cimg2196.jpg	288	192
+2194	cont						photo720/cimg2194.jpg	_lightbox		▲南東を見る　東京電力の上久屋発電所	photo288/cimg2194.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜこの場所に発電所ができたのだろうか。北側の斜面の上から延びてきている管はなんだろうか。
+2207	marker	36.658530	139.095130		2207		photo720/cimg2207.jpg	_lightbox		▲北東を見る	photo288/cimg2207.jpg	288	192
+2208	marker	36.661347	139.098304		2208		photo720/cimg2208.jpg	_lightbox			photo288/cimg2208.jpg	288	192
+2210	cont						photo720/cimg2210.jpg	_lightbox			photo288/cimg2210.jpg	288	192
+2219	marker	36.663820	139.096660		2219		photo720/cimg2219.jpg	_lightbox		蒟蒻畑	photo288/cimg2219.jpg	288	192
+2221	cont						photo720/cimg2221.jpg	_lightbox			photo288/cimg2221.jpg	288	192
+2228	marker	36.662580	139.096270		2228		photo720/cimg2228.jpg	_lightbox		▲南西を見る	photo288/cimg2228.jpg	288	192
+2250	cont						photo720/cimg2250.jpg	_lightbox		▲南西を見る（ズームアップ）	photo288/cimg2250.jpg	288	192
+2234	marker	36.658500	139.087500		2234		photo720/cimg2234.jpg	_lightbox		▲南東を見る	photo288/cimg2234.jpg	288	192
+2233	cont						photo720/cimg2233.jpg	_lightbox		▲南東を見る（ズームアップ）	photo288/cimg2233.jpg	288	192
+2235	cont						photo720/cimg2235.jpg	_lightbox		▲南西を見る	photo288/cimg2235.jpg	288	192
+2240	cont						photo720/cimg2240.jpg	_lightbox		▲南西を見る（ズームアップ）	photo288/cimg2240.jpg	288	192
+2241	marker	36.659830	139.088340		2241		photo720/cimg2241.jpg	_lightbox		▲南を見る　貯水池（東京電力の名で立入禁止の表示があった。）	photo288/cimg2241.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\nなぜ東京電力の管理する貯水池がこの場所にあるのだろうか。東京電力はこの水を何に使っているのだろうか。
+2264	marker	36.656030	139.075870		2264		photo720/cimg2264.jpg	_lightbox		▲東北東を見る	photo288/cimg2264.jpg	288	192
+2261	cont						photo720/cimg2261.jpg	_lightbox		▲南東を見る	photo288/cimg2261.jpg	288	192
+	fold				【考察のポイント】					【考察のポイント】\n樹林が幾筋か左右方向に帯状に延びている。樹林があるのはどんな地形のところだろうか。樹林の手前側の地面（田畑）と樹林の奥側の地面（田畑）の高低差に着目して考えてみよう。
+2265	marker	36.661810	139.089880		2265		photo720/cimg2265.jpg	_lightbox		▲北を見る\n観光用のりんご園がある。	photo288/cimg2265.jpg	288	192
+2270	cont						photo720/cimg2270.jpg	_lightbox		▲南西を見る\n手前は蒟蒻畑，奥はりんご園	photo288/cimg2270.jpg	288	192
+2271	marker	36.659620	139.087400		2271		photo720/cimg2271.jpg	_lightbox		▲西を見る	photo288/cimg2271.jpg	288	192
+2278	marker	36.657830	139.082180		2278		photo720/cimg2278.jpg	_lightbox		▲南南東を見る	photo288/cimg2278.jpg	288	192
+2285	marker	36.654420	139.074840		2285		photo720/cimg2285.jpg	_lightbox		▲南東を見る	photo288/cimg2285.jpg	288	192
+2284	cont						photo720/cimg2284.jpg	_lightbox		▲南を見る	photo288/cimg2284.jpg	288	192
+2290	marker	36.653580	139.073187		2290		photo720/cimg2290.jpg	_lightbox		▲南東を見る	photo288/cimg2290.jpg	288	192
+2294	cont						photo720/cimg2294.jpg	_lightbox		▲南西を見る	photo288/cimg2294.jpg	288	192
+2300	marker	36.647130	139.048150		2300		photo720/cimg2300.jpg	_lightbox		▲北を見る	photo288/cimg2300.jpg	288	192
+2302	cont						photo720/cimg2302.jpg	_lightbox		▲南南東を見る	photo288/cimg2302.jpg	288	192
+2314	marker	36.644750	139.045950		2314		photo720/cimg2314.jpg	_lightbox		▲北東を見る	photo288/cimg2314.jpg	288	192

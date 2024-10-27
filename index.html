@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!-- jQuery Colorbox 使用 -->
+<script src="/js/jquery.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/js/colorbox/colorbox.css">
+<script src="/js/colorbox/jquery.colorbox-min.js"></script>
+<!-- HTML file for 'Leaf-An' by Mutsuki Yagi -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="/js/leaflet.sprite.js"></script>
+<script>L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.9.4/dist/images/";</script>
+<script src="js/leafan.js?v=1.6.08" charset="utf-8"></script>
+<script src="js/leaftile.js?v=1.2.04" charset="utf-8"></script>
+<style type="text/css">
+<!--
+html {height:100%;}
+body {height:100%; margin:0px; -webkit-text-size-adjust:100%; text-size-adjust:100%; word-wrap:break-word; font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif; font-size:100%; line-height:150%;}
+#map_frame {width:100%; height:100%;}
+#map_canvas {background-color:#ffffff;}
+#description_canvas {overflow:auto; background-color:#ffffff;}
+div.canvasMap_sideOpen {width:70%; height:100%; float:left;}
+div.canvasDes_sideOpen {width:30%; height:100%; display:block; float:right;}
+div.canvasMap_sideClosed {width:100%; height:100%; float:left;}
+div.canvasDes_sideClosed {width:0%; height:100%; display:none; float:right;}
+#description {margin:1em; font-size:100%; line-height:150%;}
+#description_s {margin:1em; font-size:100%; line-height:150%;}
+img.iconSideBarRight {display:block;}
+img.iconSideBarBottom {display:none;}
+@media (orientation:portrait) {
+	div.canvasMap_sideOpen {width:100%; height:60%;}
+	div.canvasDes_sideOpen {width:100%; height:40%; display:block;}
+	div.canvasMap_sideClosed {width:100%; height:100%;}
+	div.canvasDes_sideClosed {width:100%; height:0%; display:none;}
+	img.iconSideBarRight {display:none;}
+	img.iconSideBarBottom {display:block;}
+}
+@media (max-width:640px) {
+	#description_canvas {font-size:70%;}
+}
+-->
+</style>
+<title>ウェブ地図</title>
+</head>
+<body>
+<div id="map_frame">
+<noscript><p>JavaScript対応ブラウザで表示してください。</p></noscript>
+<!-- 地図表示部分 -->
+<div id="map_canvas" class="canvasMap_sideOpen"></div>
+<!-- 属性情報表示部分 -->
+<div id="description_canvas" class="canvasDes_sideOpen">
+<div id="description"></div>
+<div id="description_s"></div>
+</div>
+<div style="clear:both;"><hr style="display:none;" /></div>
+</div>
+</body>
+</html>
